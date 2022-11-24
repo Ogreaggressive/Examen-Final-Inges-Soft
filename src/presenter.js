@@ -1,15 +1,15 @@
-import {returnTweet, returnStringText, restartTweetList} from "./tweet.js";
+import {returnTweet, returnStringText, restartTweetList, addTweet} from "./tweet.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
+const tweet = document.querySelector("#tweet");
+const tweetear = document.querySelector("#tweetear");
+const resultadoTweet = document.querySelector("#resultadoTweet");
 const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  console.log(tweet.innerHTML)
+  addTweet(tweet.innerHTML)
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  resultadoTweet.innerHTML = returnStringText();
 });
