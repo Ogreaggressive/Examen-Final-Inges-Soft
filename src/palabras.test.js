@@ -24,12 +24,6 @@ describe("anade palabras a la lista", () => {
         expect(returnSet()).toEqual(set);
     });
     it("separa en 3 con frases", () => {
-        getFrase("como estas")
-        let set = new Set()
-        set.add("hola")
-        set.add("que tal")
-        set.add("como")
-        set.add("estas")
-        expect(returnSet()).toEqual(set);
+        expect(getFrase("como estas")).toEqual({"como": 1, "estas": 1});
     });
   });
