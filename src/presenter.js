@@ -1,4 +1,4 @@
-import sumar from "./sumador";
+import {returnTweet, returnStringText, restartTweetList} from "./tweet.js";
 
 const first = document.querySelector("#primer-numero");
 const second = document.querySelector("#segundo-numero");

@@ -1,6 +1,11 @@
 let tweetList = []
 
 
+function addTweet(texto)
+{
+  tweetList.push(texto)
+}
+
 function returnTweet(texto) {
   tweetList.push(texto)
   return tweetList;
@@ -27,4 +32,4 @@ function restartTweetList()
 }
 
 
-export {returnTweet, returnStringText, restartTweetList};
+export {returnTweet, returnStringText, restartTweetList, addTweet};
