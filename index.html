@@ -1,11 +1,13 @@
 <html>
   <body>
+    <h1>twitter</h1>
     <form id="sumar-form">
-      <label for="tweet">Primer número:</label>
-      <input type="text" id="tweet" />
-      <input type="submit" value="tweet" id="tweet" />
+      <label for="cadena">escriba el tweet para utilizar:</label>
+      <input type="string" id="cadena" size="140"/>
+      <button id="addButton">tweetear</button>
     </form>
-    <div id="resultadoTweet"></div>
+    <h3>resultado</h3>
+    <div id="resultado"></div>
 
     <script type="module" src="./src/presenter.js"></script>
   </body>

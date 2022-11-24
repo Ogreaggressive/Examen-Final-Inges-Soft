@@ -1,15 +1,14 @@
 import {returnTweet, returnStringText, restartTweetList, addTweet} from "./tweet.js";
 
-const tweet = document.querySelector("#tweet");
-const tweetear = document.querySelector("#tweetear");
-const resultadoTweet = document.querySelector("#resultadoTweet");
-const form = document.querySelector("#sumar-form");
+let cad = document.querySelector("#cadena");
+const button = document.querySelector("#addButton");
 
-form.addEventListener("submit", (event) => {
+const res = document.querySelector("#resultado");
+
+
+button.addEventListener("click", (event) => {
   event.preventDefault();
-
-  console.log(tweet.innerHTML)
-  addTweet(tweet.innerHTML)
-
-  resultadoTweet.innerHTML = returnStringText();
+  
+  addTweet(cad.value)
+  res.innerHTML = returnStringText()
 });
