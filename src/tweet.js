@@ -16,4 +16,11 @@ function returnStringText()
   return tweetString;
 }
 
-export {returnTweet, returnStringText};
+function restartTweetList() 
+{
+  tweetList = []
+  return tweetList
+}
+
+
+export {returnTweet, returnStringText, restartTweetList};

@@ -1,4 +1,4 @@
-import {returnTweet, returnStringText} from "./tweet.js";
+import {returnTweet, returnStringText, restartTweetList} from "./tweet.js";
 
 describe("deja tweetear", () => {
   it("deberia mostrar el tweet", () => {
@@ -11,8 +11,17 @@ describe("deja tweetear", () => {
   });
 });
 
+describe("deberia borrar todos los tweets", () => {
+  it("deberia mostrar lista vacia", () => {
+    let respArray = []
+    expect(restartTweetList()).toEqual(respArray);
+  });
+});
+
 describe("muestra lista de tweets como string", () => {
   it("deberia mostrar lista de tweets", () => {
+    let respArray = returnTweet("hola")
     expect(returnStringText()).toEqual("hola");
   });
 });
+
