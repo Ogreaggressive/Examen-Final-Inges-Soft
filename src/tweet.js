@@ -1,5 +1,9 @@
+let tweetList = []
+
+
 function returnTweet(texto) {
-  return texto;
+  tweetList.push(texto)
+  return tweetList;
 }
 
 export {returnTweet};
