@@ -18,7 +18,18 @@ describe("anade palabras a la lista", () => {
 
   describe("separa la frase en palabras", () => {
     it("separa en 2", () => {
-        let respArray = ["hola", "buenas"]
-      expect(getFrase("hola buenas")).toEqual(respArray);
+        let set = new Set()
+        set.add("hola")
+        set.add("que tal")
+        expect(returnSet()).toEqual(set);
+    });
+    it("separa en 3 con frases", () => {
+        getFrase("como estas")
+        let set = new Set()
+        set.add("hola")
+        set.add("que tal")
+        set.add("como")
+        set.add("estas")
+        expect(returnSet()).toEqual(set);
     });
   });

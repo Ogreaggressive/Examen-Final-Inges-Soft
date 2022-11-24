@@ -11,11 +11,14 @@ function returnSet()
     return palabras
 }
 
+
 function getFrase(frase)
 {
-    //let regex = "/\b(\w+)\b/g"
     const splitArr = frase.split(" "); 
-    return splitArr
+    for(let i=0; i<splitArr.length; i++)
+    {
+        palabras.add(splitArr[i])
+    }
 }
 
 
