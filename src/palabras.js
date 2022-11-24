@@ -17,11 +17,12 @@ function getFrase(frase)
     const splitArr = frase.split(" "); 
     for (let i=0; i<splitArr.length; i++) {
 
-        if (!lista[splitArr[i]]) {
-            lista[splitArr[i]] = [];
-            lista[splitArr[i]] = 0
+        let word =splitArr[i].toLowerCase()
+        if (!lista[word]) {
+            lista[word] = [];
+            lista[word] = 0
         }
-        lista[splitArr[i]] = 1 + parseInt(lista[splitArr[i]])
+        lista[word] = 1 + parseInt(lista[word])
     }
     return lista
 }

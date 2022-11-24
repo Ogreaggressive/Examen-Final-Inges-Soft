@@ -26,4 +26,7 @@ describe("anade palabras a la lista", () => {
     it("separa en 3 con frases", () => {
         expect(getFrase("como estas")).toEqual({"como": 1, "estas": 1});
     });
+    it("separa en frases sin contar similares", () => {
+        expect(getFrase("como estas bien Bien BIEN")).toEqual({"como": 1, "estas": 1, "bien":3});
+    });
   });
