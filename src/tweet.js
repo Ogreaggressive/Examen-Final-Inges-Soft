@@ -8,10 +8,14 @@ function returnTweet(texto) {
 
 function returnStringText() 
 {
-  let tweetString
+  let tweetString = "tweets: "
   for(let i = 0; i<tweetList.length; i++)
   {
-    tweetString = tweetList[i]
+    tweetString += tweetList[i]
+    if(i<tweetList.length -1)
+    {
+      tweetString += ", "
+    }
   }
   return tweetString;
 }

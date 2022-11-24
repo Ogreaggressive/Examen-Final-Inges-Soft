@@ -21,7 +21,11 @@ describe("deberia borrar todos los tweets", () => {
 describe("muestra lista de tweets como string", () => {
   it("deberia mostrar lista de tweets", () => {
     let respArray = returnTweet("hola")
-    expect(returnStringText()).toEqual("hola");
+    expect(returnStringText()).toEqual("tweets: hola");
+  });
+  it("deberia mostrar mas tweets", () => {
+    let respArray = returnTweet("que tal")
+    expect(returnStringText()).toEqual("tweets: hola, que tal");
   });
 });
 
