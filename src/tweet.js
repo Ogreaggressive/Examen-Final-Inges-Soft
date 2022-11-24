@@ -3,7 +3,10 @@ let tweetList = []
 
 function addTweet(texto)
 {
-  tweetList.push(texto)
+  if(!texto.length == 0)
+  {
+    tweetList.push(texto)
+  }
 }
 
 function returnTweet(texto) {
